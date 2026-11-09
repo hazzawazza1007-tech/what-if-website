@@ -1,6 +1,3 @@
-# what-if-website
-The official WHAT IF?  website
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,10 +7,7 @@ The official WHAT IF?  website
   <title>WHAT IF? — A new question every day</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
@@ -24,7 +18,6 @@ The official WHAT IF?  website
       color: #f5f7fb;
       font-family: system-ui, sans-serif;
     }
-
     main {
       width: min(100%, 720px);
       padding: clamp(1.5rem, 5vw, 3rem);
@@ -33,7 +26,6 @@ The official WHAT IF?  website
       background: #182337;
       box-shadow: 0 20px 60px #0005;
     }
-
     .eyebrow {
       color: #9fb5d8;
       font-size: 0.9rem;
@@ -41,36 +33,20 @@ The official WHAT IF?  website
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-
     h1 {
       margin: 0.5rem 0 2rem;
       font-size: clamp(2.5rem, 9vw, 4.5rem);
     }
-
-    h2 {
-      line-height: 1.2;
-    }
-
-    #q {
-      font-size: clamp(1.7rem, 5vw, 2.5rem);
-    }
-
-    p {
-      line-height: 1.7;
-    }
-
-    #intro {
-      color: #c8d5e9;
-      font-size: 1.15rem;
-    }
-
+    h2 { line-height: 1.2; }
+    #q { font-size: clamp(1.7rem, 5vw, 2.5rem); }
+    p { line-height: 1.7; }
+    #intro { color: #c8d5e9; font-size: 1.15rem; }
     .about {
       margin-top: 2rem;
       padding-top: 1rem;
       border-top: 1px solid #344158;
       color: #c8d5e9;
     }
-
     button {
       margin-top: 1rem;
       padding: 0.8rem 1.1rem;
@@ -82,11 +58,7 @@ The official WHAT IF?  website
       font-weight: 700;
       cursor: pointer;
     }
-
-    button:hover {
-      background: #b1d0ff;
-    }
-
+    button:hover { background: #b1d0ff; }
     #toast {
       min-height: 1.5em;
       color: #b9f6ca;
@@ -146,7 +118,6 @@ The official WHAT IF?  website
       }
     ];
 
-    // Get today's date in Perth so everyone sees the same daily scenario.
     const perthParts = new Intl.DateTimeFormat("en", {
       timeZone: "Australia/Perth",
       year: "numeric",
@@ -159,7 +130,6 @@ The official WHAT IF?  website
     const month = Number(getPart("month"));
     const day = Number(getPart("day"));
 
-    // Rotate through the ideas in order, advancing once per Perth calendar day.
     const todayNumber = Math.floor(Date.UTC(year, month - 1, day) / 86400000);
     const startNumber = Math.floor(Date.UTC(2026, 0, 1) / 86400000);
     const scenarioIndex =
@@ -168,7 +138,6 @@ The official WHAT IF?  website
 
     const today = scenarios[scenarioIndex];
 
-    // Fill the page with today's scenario.
     document.getElementById("q").textContent = today.question;
     document.getElementById("intro").textContent = today.intro;
     document.getElementById("ex").textContent = today.explanation;
@@ -178,7 +147,6 @@ The official WHAT IF?  website
       "Each day, WHAT IF? explores one extraordinary scenario through a visual and a short, clear explanation. Today's question: " +
       today.question;
 
-    // Share the scenario, or copy its text if sharing isn't available.
     document.getElementById("share").addEventListener("click", async () => {
       const text = today.question + " " + today.intro +
         " Explore the scenario on WHAT IF?!";
@@ -198,7 +166,6 @@ The official WHAT IF?  website
       }
     });
 
-    // Reload just after midnight in Perth so the page updates for the new day.
     const perthNow = new Date(Date.now() + 8 * 60 * 60 * 1000);
     const nextMidnight = Date.UTC(
       perthNow.getUTCFullYear(),

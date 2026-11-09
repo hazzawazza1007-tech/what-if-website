@@ -1,6 +1,3 @@
-# what-if-website
-The official WHAT IF?  website
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -207,6 +204,9 @@ The official WHAT IF?  website
     ) - 8 * 60 * 60 * 1000;
 
     setTimeout(() => location.reload(), nextMidnight - Date.now() + 1000);
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>

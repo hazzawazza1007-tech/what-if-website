@@ -1,6 +1,32 @@
 # what-if-website
 The official WHAT IF?  website
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WHAT IF?</title>
+</head>
+<body>
+  <main>
+    <h1>WHAT IF?</h1>
+    <h2 id="q">Today's question</h2>
+    <p id="intro"></p>
+    <p id="ex"></p>
+    <button id="share" type="button">Share this scenario</button>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>Explore one extraordinary scenario each day.</p>
+    </section>
+
+    <p id="toast" aria-live="polite"></p>
+  </main>
+
+  <!-- Copy the existing <script> ... </script> block from README.md here. -->
+</body>
+</html>
 <script>
 const scenarios = [
   {

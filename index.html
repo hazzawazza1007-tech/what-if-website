@@ -166,17 +166,11 @@
       }
     });
 
-    const perthNow = new Date(Date.now() + 8 * 60 * 60 * 1000);
-    const nextMidnight = Date.UTC(
-      perthNow.getUTCFullYear(),
-      perthNow.getUTCMonth(),
-      perthNow.getUTCDate() + 1
-    ) - 8 * 60 * 60 * 1000;
-
-    setTimeout(() => location.reload(), nextMidnight - Date.now() + 1000);
-    background:
-  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url("images/sunset.png") center / cover no-repeat fixed;
+const nextMidnight = Date.UTC(
+  perthNow.getUTCFullYear(),
+  perthNow.getUTCMonth(),
+  perthNow.getUTCDate() + 1
+) - 8 * 60 * 60 * 1000;
   </script>
 </body>
 </html>

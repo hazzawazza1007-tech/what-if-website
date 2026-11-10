@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="Earth background illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#020d1d"/>
+      <stop offset="45%" stop-color="#081b34"/>
+      <stop offset="100%" stop-color="#112b4d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#7cc7ff" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#1c74d7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#020d1d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ocean" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0d3c6a"/>
+      <stop offset="50%" stop-color="#0a2d5d"/>
+      <stop offset="100%" stop-color="#061a34"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" x2="1">
+      <stop offset="0%" stop-color="#8ce3a3"/>
+      <stop offset="100%" stop-color="#3fae79"/>
+    </linearGradient>
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#sky)"/>
+  <rect width="1600" height="1200" fill="url(#glow)"/>
+
+  <g opacity="0.85">
+    <circle cx="1100" cy="280" r="4" fill="#ffffff"/>
+    <circle cx="1300" cy="400" r="3" fill="#dfeeff"/>
+    <circle cx="920" cy="500" r="2.5" fill="#ffffff"/>
+    <circle cx="720" cy="240" r="2" fill="#dfeeff"/>
+    <circle cx="580" cy="360" r="3" fill="#ffffff"/>
+    <circle cx="405" cy="240" r="2.5" fill="#dfeeff"/>
+    <circle cx="240" cy="520" r="3" fill="#ffffff"/>
+    <circle cx="1180" cy="640" r="2" fill="#dfeeff"/>
+    <circle cx="390" cy="710" r="2.5" fill="#ffffff"/>
+    <circle cx="1220" cy="860" r="3" fill="#dfeeff"/>
+  </g>
+
+  <g filter="url(#softBlur)" opacity="0.42">
+    <ellipse cx="980" cy="670" rx="500" ry="260" fill="#78d7ff"/>
+  </g>
+
+  <g transform="translate(170 120) rotate(-8 640 480)">
+    <circle cx="640" cy="480" r="410" fill="url(#ocean)"/>
+
+    <path d="M540 270c87-60 169-57 231-15 65 44 111 71 141 124 39 70 34 143-45 209-33 28-85 53-131 63-97 21-190-23-261-82-63-52-109-122-102-203 6-81 77-135 167-96z" fill="url(#land)" opacity="0.9"/>
+    <path d="M1015 470c18-54 82-84 131-79 46 4 90 36 98 82-28 29-75 47-112 52-62 8-95-12-117-55z" fill="url(#land)" opacity="0.9"/>
+    <path d="M420 480c35-71 107-117 176-119 69-2 150 40 166 103-44 31-99 52-151 62-57 11-151 4-191-46z" fill="url(#land)" opacity="0.9"/>
+    <path d="M760 635c32-42 55-101 113-112 54-10 102 15 106 67 23 62 2 101-33 142-43 50-116 66-172 48-42-13-78-67-76-145z" fill="url(#land)" opacity="0.9"/>
+    <path d="M675 820c32-54 83-100 133-95 57 6 113 52 123 112-32 66-96 98-161 103-52 4-102-25-117-74 6-17 11-29 22-46z" fill="url(#land)" opacity="0.9"/>
+    <path d="M310 720c50-52 114-82 196-73 30 3 60 14 76 38-36 30-61 67-103 97-55 41-138 49-193 20-19-9-41-35-41-82 15 0 37 0 65 0z" fill="url(#land)" opacity="0.9"/>
+  </g>
+</svg>
